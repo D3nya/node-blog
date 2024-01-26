@@ -1,0 +1,44 @@
+@use "../utilities" as *;
+@use "sass:map";
+
+.posts {
+  &__text {
+    padding-top: 1rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    border: 3px solid $text-color;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: border-color 0.1s ease-in-out;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      border-color: $brand-color;
+    }
+  }
+}
+
+@media screen and (max-width: map.get($breakpoints, "medium")) {
+  .posts {
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}

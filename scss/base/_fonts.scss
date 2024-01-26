@@ -1,0 +1,12 @@
+@use '../utilities' as *;
+
+/*
+ * Example:
+ * @include font-face(
+ *   'Name',
+ *   '../fonts/Name',
+ *   400, // Font weight
+ *   normal, // Font style
+ *   eot woff2 woff ttf // Font formats
+ * );
+ */

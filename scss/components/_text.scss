@@ -1,0 +1,12 @@
+@use "../utilities" as *;
+@use "sass:map";
+
+.text {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: map.get($breakpoints, "medium")) {
+  .text {
+    font-size: 1rem;
+  }
+}

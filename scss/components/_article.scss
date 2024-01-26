@@ -1,0 +1,16 @@
+@use "../utilities" as *;
+@use "sass:map";
+
+.article {
+  &__title {
+    margin: 0;
+    margin-bottom: 5px;
+    padding-top: 0px;
+    text-align: center;
+  }
+
+  &__info {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+}

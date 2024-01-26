@@ -1,0 +1,9 @@
+<section class="post">
+  <h1 class="post__title title">Post section</h1>
+  <div class="post__block">
+    {{#with post}}
+    {{> article link=false}}
+    {{/with}}
+    {{> articleDelete}}
+  </div>
+</section>

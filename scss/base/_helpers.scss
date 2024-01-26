@@ -1,0 +1,25 @@
+@use '../utilities' as *;
+
+/**
+ * Clear inner floats and restore the flow after a floating element
+ */
+.clearfix::after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+/**
+ * Main content containers
+ * 1. Make the container full-width with a maximum width
+ * 2. Center it in the viewport
+ * 3. Leave some space on the edges, especially valuable on small screens
+ */
+.container {
+  width: 100%; /* 1 */
+  max-width: $max-width; /* 1 */
+  padding-right: 20px; /* 3 */
+  padding-left: 20px; /* 3 */
+  margin-right: auto; /* 2 */
+  margin-left: auto; /* 2 */
+}

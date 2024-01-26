@@ -1,0 +1,35 @@
+@use "../utilities" as *;
+@use "sass:map";
+
+.form {
+  max-width: 90%;
+  margin: 0 auto;
+
+  &__block {
+    margin-top: 1rem;
+  }
+
+  &__label {
+    margin-bottom: 0.4rem;
+    display: block;
+    font-weight: bold;
+  }
+
+  &__textarea,
+  &__input {
+    background-color: $brand-color;
+    padding: 0.4rem;
+    width: 100%;
+    border: 2px solid $text-color;
+    border-radius: 4px;
+    transition: outline 0.1s ease-in-out;
+
+    &:focus {
+      outline: 2px solid $text-color;
+    }
+  }
+
+  &__button {
+    margin-top: 1rem;
+  }
+}

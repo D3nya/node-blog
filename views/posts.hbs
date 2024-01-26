@@ -1,0 +1,16 @@
+<section class="posts">
+  <h1 class="title">Posts</h1>
+  <p class="text posts__text">Lorem ipsum dolor sit amet consectetur adipisicing
+    elit. Reiciendis blanditiis esse expedita magnam quo. Dignissimos laudantium
+    adipisci veritatis, tenetur labore provident totam expedita nostrum, nulla
+    eligendi nisi porro odio numquam.</p>
+  <h3 class="title posts__title">Posts list</h3>
+  <ul class="posts__list">
+    {{#each posts}}
+    <li class="posts__item">
+      {{> article link=true}}
+    </li>
+    {{/each}}
+  </ul>
+  {{> articleDelete}}
+</section>

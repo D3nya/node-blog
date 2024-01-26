@@ -1,0 +1,16 @@
+@use "../utilities" as *;
+@use "sass:map";
+
+.title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+
+@media screen and (max-width: map.get($breakpoints, "medium")) {
+  .title {
+    font-size: 2rem;
+    padding: 0.25rem 0;
+  }
+}

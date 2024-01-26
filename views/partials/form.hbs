@@ -1,0 +1,33 @@
+<div class="form">
+  {{#if edit}}
+  <form action="/posts/{{post._id}}?_method=PUT" method="post" id="post-form">
+  {{else}}
+  <form action="/posts" method="post" id="post-form">
+  {{/if}}
+    <div class="form__block">
+    <label for="post-title" class="form__label">Post title</label>
+    {{#if edit}}
+      <input type="text" id="post-title" name="title" value="{{post.title}}" class="form__input"/>
+    {{else}}
+      <input type="text" id="post-title" name="title" class="form__input"/>
+    {{/if}}
+    </div>
+    <div class="form__block">
+    <label for="post-text" class="form__label">Post text</label>
+    {{#if edit}}
+      <textarea id="post-text" cols="30" rows="10" name="text" class="form__textarea">{{post.text}}</textarea>
+    {{else}}
+      <textarea id="post-text" cols="30" rows="10" name="text" class="form__textarea"></textarea>
+    {{/if}}
+    </div>
+    <div class="form__block">
+    <label for="post-author" class="form__label">Post author</label>
+    {{#if edit}}
+      <input type="text" id="post-author" name="author" value="{{post.author}}" class="form__input"/>
+    {{else}}
+      <input type="text" id="post-author" name="author" class="form__input"/>
+    {{/if}}
+    </div>
+    <input type="submit" value="Submit" class="button form__button" />
+  </form>
+</section>

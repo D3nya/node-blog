@@ -1,0 +1,38 @@
+@use "../utilities" as *;
+@use "sass:map";
+
+.header {
+  background-color: rgba(0, 0, 0, 0.1);
+
+  padding: 1rem 0;
+  flex: 0 0 auto;
+}
+
+.navbar {
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__link {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: map.get($breakpoints, "medium")) {
+  .navbar {
+    &__link {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: map.get($breakpoints, "small")) {
+  .navbar {
+    &__link {
+      font-size: 1.1rem;
+    }
+  }
+}

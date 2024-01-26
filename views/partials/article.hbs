@@ -1,0 +1,16 @@
+<article class="article">
+  {{#if link}}
+    <h5 class="article__title title">
+      <a class="link" href="/posts/{{_id}}">{{title}}</a>
+    </h5>
+  {{else}}
+    <h5 class="article__title title">{{title}}</h5>
+  {{/if}}
+  <p class="article__text text">{{text}}</p>
+  <div class="article__info">
+    <div class="text"><b>Author: </b>{{author}}</div>
+    <div class="text"><b>Date: </b>{{createdAt}}</div>
+  </div>
+  <button class="article__button button" data-id={{_id}}>Delete</button>
+  <a class="article__button button" href="/posts/edit/{{_id}}">Edit</a>
+</article>

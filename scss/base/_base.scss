@@ -1,0 +1,108 @@
+@use "../utilities" as *;
+
+html {
+  /* Set up a decent box model on the root element */
+  box-sizing: border-box;
+
+  /* Prevent font size inflation */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/*
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/*
+ * Set up smooth scroll
+ */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd,
+ul {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    0deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(187, 45, 111, 1) 48%,
+    rgba(253, 29, 29, 1) 87%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+ * Basic styles for links
+ */
+a {
+  color: $text-color;
+  text-decoration: none;
+
+  @include on-event {
+    color: $brand-color;
+  }
+}
+
+/*
+ * Basic styles for buttons
+ */
+button {
+  @include u-reset;
+  border: revert;
+  cursor: pointer;
+}
+
+/*
+ * Basic styles for textarea
+ */
+textarea {
+  resize: none;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}

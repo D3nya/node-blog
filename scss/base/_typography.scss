@@ -1,0 +1,18 @@
+@use '../utilities' as *;
+
+/* Basic typography style for copy text */
+body {
+  color: $text-color;
+  font: normal 100% / 1.5 $text-font-stack;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}

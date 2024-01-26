@@ -1,0 +1,30 @@
+@use "../utilities" as *;
+@use "sass:map";
+
+.error {
+  &__text {
+    padding-top: 1rem;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  &__strong {
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+@media screen and (max-width: map.get($breakpoints, "medium")) {
+  .error {
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@use "../utilities" as *;
+
+.button {
+  border: 2px solid $text-color;
+  border-radius: 4px;
+  color: $text-color;
+  padding: 5px 10px;
+  transition: color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover {
+    color: $brand-color;
+    border-color: $brand-color;
+  }
+}
