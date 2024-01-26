@@ -2,6 +2,6 @@
 
 Simple blog, based on Node.js.
 
-Created with express, mongoose, handlebars.
+Created with express, mongoose, handlebars, scss.
 
 MVC pattern.
